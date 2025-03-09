@@ -1,9 +1,67 @@
 # Changelog
 
+## [3.6.3]
+
+-   Improve QwQ support for Alibaba (thanks @meglinge!) and OpenRouter
+-   Improve diff edit prompting to prevent immediately reverting to write_to_file when a model uses search patterns that don't match anything in the file
+-   Fix bug where new checkpoints system would revert file changes when switching between tasks
+-   Fix issue with incorrect token count for some OpenAI compatible providers
+
+## [3.6.0]
+
+-   Add Cline API as a provider option, allowing new users to sign up and get started with Cline for free
+-   Optimize checkpoints with branch-per-task strategy, reducing storage required and first task load times
+-   Fix problem with Plan/Act toggle keyboard shortcut not working in Windows (thanks @yt3trees!)
+-   Add new Gemini models to GCP Vertex (thanks @shohei-ihaya!) and Claude models AskSage (thanks @swhite24!)
+-   Improve OpenRouter/Cline error reporting
+
+## [3.5.1]
+
+-   Add timeout option to MCP servers
+-   Add Gemini Flash models to Vertex provider (thanks @jpaodev!)
+-   Add prompt caching support for AWS Bedrock provider (thanks @buger!)
+-   Add AskSage provider (thanks @swhite24!)
+
+## [3.5.0]
+
+-   Add 'Enable extended thinking' option for Claude 3.7 Sonnet, with ability to set different budgets for Plan and Act modes
+-   Add support for rich MCP responses with automatic image previews, website thumbnails, and WolframAlpha visualizations
+-   Add language preference option in Advanced Settings
+-   Add xAI Provider Integration with support for all Grok models (thanks @andrewmonostate!)
+-   Fix issue with Linux XDG pointing to incorrect path for Document folder (thanks @jonatkinson!)
+
+## [3.4.10]
+
+-   Add support for GPT-4.5 preview model
+
+## [3.4.9]
+
+-   Add toggle to let users opt-in to anonymous telemetry and error reporting
+
+## [3.4.6]
+
+-   Add support for Claude 3.7 Sonnet
+
+## [3.4.0]
+
+-   Introducing MCP Marketplace! You can now discover and install the best MCP servers right from within the extension, with new servers added regularly
+-   Add mermaid diagram support in Plan mode! You can now see visual representations of mermaid code blocks in chat, and click on them to see an expanded view
+-   Use more visual checkpoints indicators after editing files & running commands
+-   Create a checkpoint at the beginning of each task to easily revert to the initial state
+-   Add 'Terminal' context mention to reference the active terminal's contents
+-   Add 'Git Commits' context mention to reference current working changes or specific commits (thanks @mrubens!)
+-   Send current textfield contents as additional feedback when toggling from Plan to Act Mode, or when hitting 'Approve' button
+-   Add advanced configuration options for OpenAI Compatible (context window, max output, pricing, etc.)
+-   Add Alibaba Qwen 2.5 coder models, VL models, and DeepSeek-R1/V3 support
+-   Improve support for AWS Bedrock Profiles
+-   Fix Mistral provider support for non-codestral models
+-   Add advanced setting to disable browser tool
+-   Add advanced setting to set chromium executable path for browser tool
+
 ## [3.3.2]
 
 -   Fix bug where OpenRouter requests would periodically not return cost/token stats, leading to context window limit errors
--   Make checkpoints more visible and keep track of restored checkpoints 
+-   Make checkpoints more visible and keep track of restored checkpoints
 
 ## [3.3.0]
 
@@ -34,7 +92,7 @@
 
 ## [3.2.10]
 
--   Improve support for DeepSeek-R1 (deepseek-reasoner) model for OpenRouter, OpenAI-compatible, and DeepSeek direct
+-   Improve support for DeepSeek-R1 (deepseek-reasoner) model for OpenRouter, OpenAI-compatible, and DeepSeek direct (thanks @Szpadel!)
 -   Show Reasoning tokens for models that support it
 -   Fix issues with switching models between Plan/Act modes
 
